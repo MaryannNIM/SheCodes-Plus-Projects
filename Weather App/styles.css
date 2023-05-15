@@ -1,0 +1,104 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 48px;
+  color: #0db67d;
+  padding-top: 5px;
+}
+h4,
+h5 {
+  font-size: 20px;
+  margin: 20px auto;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+button {
+  background-color: #4e57d8;
+  border-color: blue;
+  color: #ffffff;
+}
+
+ul {
+  margin: 20px auto;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: #ffffff;
+}
+
+.container {
+  position: static;
+  border: 1px solid #86f098;
+  block-size: 570px;
+  border-width: 5px;
+  display: block;
+  inline-size: 700px;
+  border-radius: 10px;
+  background-color: #8684ec;
+
+  background-image: url(https://images.pexels.com/photos/355989/pexels-photo-355989.jpeg?auto=compress&cs=tinysrgb&w=850);
+}
+
+.element {
+  padding: 20px;
+  top: 200px;
+  position: fixed;
+  left: 550px;
+  font-weight: 550;
+  font-size: 18px;
+}
+.currentDayWeather {
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 550;
+  padding: 0;
+}
+.countries-button {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.search-form {
+  margin-bottom: 20px;
+  padding: 0;
+  display: inline;
+}
+.col-6 {
+  margin: 0, auto;
+  padding-right: 0;
+}
+.col-3 {
+  padding-left: 5px;
+}
+
+.days-container {
+  display: grid;
+  gap: 10px;
+  color: #ffffff;
+  font-weight: 550;
+  font-size: 20px;
+}
+.temperature {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1;
+}
+.weather-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+}
+.units {
+  position: relative;
+  top: -30px;
+}

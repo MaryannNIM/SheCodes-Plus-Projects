@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <h1>Weather Forecast</h1>
+        <form class="countries-button">
+          <button type="button" class="btn btn-success">Abuja</button>
+          <button type="button" class="btn btn-success">Kigali</button>
+          <button type="button" class="btn btn-success">Accra</button>
+          <button type="button" class="btn btn-success">Algiers</button>
+          <button type="button" class="btn btn-success">Cairo</button>
+        </form>
+
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+
+            <div class="col-3">
+              <input
+                type="submit"
+                value="search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <h4 class="city" id="city">Johannesburg</h4>
+        <h5 class="currentDay" id="currentDay">Thursday 10:00</h5>
+
+        <div class="currentDayWeather">
+          <strong id="description">Partly cloudy</strong>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="images/partly_cloudy.png"
+                  alt="Cloudy-icon"
+                  class="weather-icon float-left"
+                />
+
+                <div class="float-left">
+                  <span class="temperature" id="temp">26</span>
+                  <span class="units">
+                    <a href="#" id="celsius-link">°C </a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element">
+          <ul>
+            <li>Pressure: <strong id="pressure">0</strong>Pa</li>
+            <li>Wind: <strong id="wind">23</strong>km/h</li>
+            <li>Humidity: <strong id="humidity">78</strong>%</li>
+          </ul>
+        </div>
+
+        <div class="days-container">
+          <div class="row">
+            <div class="col">
+              Thur
+              <br />
+              <img src="images/partly_cloudy.png" alt="" width="60" />
+              <br />
+              26°C
+            </div>
+
+            <div class="col">
+              Fri
+              <br />
+              <img src="images/partly_cloudy.png" alt="" width="60" />
+              <br />
+              26°C
+            </div>
+
+            <div class="col">
+              Sat
+              <br />
+              <img src="images/Cloudy-rain.png" alt="" width="60" />
+              <br />
+              24°C
+            </div>
+
+            <div class="col">
+              Sun
+              <br />
+              <img src="images/partly_cloudy.png" alt="" width="60" />
+              <br />
+              24°C
+            </div>
+
+            <div class="col">
+              Mon
+              <br />
+              <img src="images/Cloudy-rain.png" alt="" width="60" />
+              <br />
+              23°C
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
