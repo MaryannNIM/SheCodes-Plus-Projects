@@ -109,3 +109,10 @@ p {
 .description:first-letter {
   text-transform: capitalize;
 }
+.currentDayWeather.active {
+  color: #ffffff;
+  cursor: default;
+}
+.currentDayWeather.active:hover {
+  text-decoration: none;
+}

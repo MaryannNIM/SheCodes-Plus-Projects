@@ -26,14 +26,14 @@ function dateTime(date) {
 
 function showWeatherTemp(response) {
   document.querySelector(`#city`).innerHTML = response.city;
-  document.querySelector(`#temp`).innerHTML = Math.round(
-    response.temperature.current
-  );
   document.querySelector(`#humidity`).innerHTML = response.temperature.humidity;
   document.querySelector(`#wind`).innerHTML = Math.round(response.wind.speed);
   document.querySelector(`#pressure`).innerHTML = Math.round(
     response.temperature.pressure
   );
+  celsiusTemperature = response.temperature.current;
+  document.querySelector(`#temp`).innerHTML = Math.round(celsiusTemperature);
+
   document.querySelector(`#description`).innerHTML =
     response.condition.description;
   document.querySelector(`#currentDay`).innerHTML = formattedDate(
@@ -79,6 +79,26 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector(`#temp`);
+  Celsiuslink.classList.remove(`active`);
+  fahrenheitlink.classList.add(`active`);
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector(`#temp`);
+  Celsiuslink.classList.add(`active`);
+  fahrenheitlink.classList.remove(`active`);
+  temperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let date = document.querySelector(`#currentDay`);
 date.innerHTML = dateTime(new Date());
 
@@ -87,3 +107,11 @@ searchForm.addEventListener(`submit`, submit);
 
 let currentButton = document.querySelector(`#current-location-button`);
 currentButton.addEventListener(`click`, getCurrentLocation);
+
+let Celsiuslink = document.querySelector(`#celsius-link`);
+fahrenheitlink.addEventListener(`click`, celsiusTemperature);
+
+let fahrenheitlink = document.querySelector(`#fahrenheit-link`);
+fahrenheitlink.addEventListener(`click`, showFahrenheitTemperature);
+
+searchCity(`Paris`);
