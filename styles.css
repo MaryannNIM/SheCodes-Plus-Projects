@@ -57,7 +57,7 @@ p {
   padding: 20px;
   top: 200px;
   position: fixed;
-  left: 550px;
+  left: 700px;
   font-weight: 550;
   font-size: 18px;
 }
@@ -105,4 +105,7 @@ p {
 .units {
   position: relative;
   top: -30px;
+}
+.description:first-letter {
+  text-transform: capitalize;
 }
