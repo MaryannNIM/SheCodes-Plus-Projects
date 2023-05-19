@@ -95,38 +95,21 @@ function getCurrentLocation(event) {
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector(`#temp`);
-
-  let fahrenheitlink = document.querySelector(`#fahrenheit-link`);
-  let celsiuslink = document.querySelector(`#celsius-link`);
-
   celsiuslink.classList.remove(`active`);
   fahrenheitlink.classList.add(`active`);
-
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  temperature.innerHTML = `${fahrenheitTemperature}`;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
-
-  let fahrenheitlink = document.querySelector(`#fahrenheit-link`);
-  let celsiuslink = document.querySelector(`#celsius-link`);
-
+  let temperature = document.querySelector(`#temp`);
   celsiuslink.classList.add(`active`);
   fahrenheitlink.classList.remove(`active`);
-
-  let temperature = document.querySelector(`#temp`);
-  celsiusTemperature = Math.round(celsiusTemperature);
-  temperature.innerHTML = `${celsiusTemperature}`;
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
-
-let celsiuslink = document.querySelector(`#celsius-link`);
-fahrenheitlink.addEventListener(`click`, showCelsiusTemperature);
-
-let fahrenheitlink = document.querySelector(`#fahrenheit-link`);
-fahrenheitlink.addEventListener(`click`, showFahrenheitTemperature);
 
 let date = document.querySelector(`#currentDay`);
 date.innerHTML = dateTime(new Date());
@@ -137,4 +120,10 @@ searchForm.addEventListener(`submit`, submit);
 let currentButton = document.querySelector(`#current-location-button`);
 currentButton.addEventListener(`click`, getCurrentLocation);
 
-searchCity(`Abuja`);
+let celsiuslink = document.querySelector(`#celsius-link`);
+fahrenheitlink.addEventListener(`click`, showCelsiusTemperature);
+
+let fahrenheitlink = document.querySelector(`#fahrenheit-link`);
+fahrenheitlink.addEventListener(`click`, showFahrenheitTemperature);
+
+searchCity(`Lagos`);

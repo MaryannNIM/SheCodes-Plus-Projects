@@ -111,10 +111,10 @@ p {
 .description::first-letter {
   text-transform: capitalize;
 }
-.currentDayWeather.active {
+.units.active {
   color: #ffffff;
   cursor: default;
 }
-.currentDayWeather.active:hover {
+.units.active:hover {
   text-decoration: none;
 }
