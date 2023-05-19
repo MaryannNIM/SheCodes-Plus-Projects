@@ -29,13 +29,6 @@
       <div class="container">
         <div class="weather-app">
           <h1>Weather Forecast</h1>
-          <form class="countries-button">
-            <button type="button" class="btn btn-success">Abuja</button>
-            <button type="button" class="btn btn-success">Kigali</button>
-            <button type="button" class="btn btn-success">Accra</button>
-            <button type="button" class="btn btn-success">Algiers</button>
-            <button type="button" class="btn btn-success">Cairo</button>
-          </form>
 
           <form class="search-form" id="search-form">
             <div class="row">
@@ -69,12 +62,11 @@
           </form>
 
           <h4 class="city" id="city"></h4>
-          <h5>
-            Last updated: <strong class="currentDay" id="currentDay"></strong>
-          </h5>
+
+          <h5>Updated: <span class="currentDay" id="currentDay"></span></h5>
 
           <div class="currentDayWeather">
-            <strong class="description" id="description">Partly cloudy</strong>
+            <span class="description" id="description"></span>
             <div class="row">
               <div class="col-6">
                 <div class="d-flex weather-temperature">
@@ -84,13 +76,10 @@
                     class="weather-icon float-left"
                     id="icon"
                   />
-
                   <div class="float-left">
-                    <span class="temperature" id="temp"
-                      ><strong>26</strong></span
-                    >
+                    <span class="temperature" id="temp"></span>
                     <span class="units">
-                      <a href="#" id="celsius-link" class="active">°C </a> |
+                      <a href="#" class="active" id="celsius-link">°C </a> |
                       <a href="#" id="fahrenheit-link">°F</a>
                     </span>
                   </div>
@@ -101,13 +90,13 @@
 
           <div class="element">
             <ul>
-              <li>Pressure: <strong id="pressure">0</strong>Pa</li>
-              <li>Wind: <strong id="wind">23</strong>km/h</li>
-              <li>Humidity: <strong id="humidity">78</strong>%</li>
+              <li>Pressure: <strong id="pressure"></strong>Pa</li>
+              <li>Wind: <strong id="wind"></strong>km/h</li>
+              <li>Humidity: <strong id="humidity"></strong>%</li>
             </ul>
           </div>
 
-          <div class="days-container">
+          <div class="days-container" id="days-container">
             <div class="row">
               <div class="col">
                 Thur

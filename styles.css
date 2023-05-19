@@ -12,11 +12,17 @@ h1 {
   color: #0db67d;
   padding-top: 5px;
 }
-h4,
+h4 {
+  padding-top: 35px;
+  font-size: 22px;
+  margin: 20px auto;
+  color: #ffffff;
+  font-weight: 600;
+}
+
 h5 {
   font-size: 20px;
   margin: 20px auto;
-  padding: 0;
   color: #ffffff;
   font-weight: 600;
 }
@@ -43,12 +49,13 @@ p {
 .container {
   position: static;
   border: 1px solid #86f098;
-  block-size: 570px;
+  block-size: 550px;
   border-width: 5px;
   display: block;
-  inline-size: 700px;
+  inline-size: 650px;
   border-radius: 10px;
   background-color: #8684ec;
+  margin-bottom: 3px;
 
   background-image: url(https://images.pexels.com/photos/355989/pexels-photo-355989.jpeg?auto=compress&cs=tinysrgb&w=850);
 }
@@ -65,12 +72,6 @@ p {
   margin-bottom: 40px;
   color: #ffffff;
   font-weight: 550;
-  padding: 0;
-}
-.countries-button {
-  margin-left: 10px;
-  margin-bottom: 20px;
-  padding: 0;
 }
 .search-form {
   margin-bottom: 20px;
@@ -91,6 +92,7 @@ p {
   color: #ffffff;
   font-weight: 550;
   font-size: 20px;
+  padding-top: 40px;
 }
 .temperature {
   font-size: 50px;
@@ -106,7 +108,7 @@ p {
   position: relative;
   top: -30px;
 }
-.description:first-letter {
+.description::first-letter {
   text-transform: capitalize;
 }
 .currentDayWeather.active {
