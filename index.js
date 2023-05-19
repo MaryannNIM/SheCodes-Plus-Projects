@@ -121,9 +121,9 @@ let currentButton = document.querySelector(`#current-location-button`);
 currentButton.addEventListener(`click`, getCurrentLocation);
 
 let celsiuslink = document.querySelector(`#celsius-link`);
-fahrenheitlink.addEventListener(`click`, showCelsiusTemperature);
+celsiuslink.addEventListener(`click`, showCelsiusTemperature);
 
 let fahrenheitlink = document.querySelector(`#fahrenheit-link`);
 fahrenheitlink.addEventListener(`click`, showFahrenheitTemperature);
 
-searchCity(`Lagos`);
+searchCity("Abuja");

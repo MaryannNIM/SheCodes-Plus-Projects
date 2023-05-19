@@ -108,13 +108,13 @@ p {
   position: relative;
   top: -30px;
 }
-.description::first-letter {
+.description :first-letter {
   text-transform: capitalize;
 }
-.units.active {
+.units .active {
   color: #ffffff;
   cursor: default;
 }
-.units.active:hover {
+.units .active:hover {
   text-decoration: none;
 }
