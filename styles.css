@@ -48,7 +48,7 @@ p {
 
 .container {
   position: static;
-  border: 1px solid #86f098;
+  border: 1px solid #8d8b8b;
   block-size: 550px;
   border-width: 5px;
   display: block;
@@ -57,9 +57,8 @@ p {
   background-color: #8684ec;
   margin-bottom: 3px;
 
-  background-image: url(https://images.pexels.com/photos/355989/pexels-photo-355989.jpeg?auto=compress&cs=tinysrgb&w=850);
+  background-image: url(https://img.freepik.com/premium-photo/cloudy-night-sky_250469-6416.jpg);
 }
-
 .element {
   padding: 20px;
   top: 200px;
@@ -78,31 +77,16 @@ p {
   padding: 0;
   display: inline;
 }
-.col-6 {
-  margin: 0, auto;
-  padding-right: 0;
-}
-.col-3 {
-  padding-left: 5px;
-}
-
-.days-container {
-  display: grid;
-  gap: 10px;
-  color: #ffffff;
-  font-weight: 550;
-  font-size: 20px;
-  padding-top: 40px;
-}
 .temperature {
   font-size: 50px;
   font-weight: 400;
   line-height: 1;
 }
 .weather-icon {
-  height: 50px;
-  width: 50px;
-  margin-right: 5px;
+  height: 60px;
+  width: 60px;
+  margin-right: 2px;
+  padding-right: 0;
 }
 .units {
   position: relative;
@@ -117,4 +101,21 @@ p {
 }
 .units .active:hover {
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 20px;
 }
